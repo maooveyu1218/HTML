@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>sample</title>
+  <style>
+    div{
+      width: 100%;
+      height: 100px;
+      background: #eee;
+    }
+  </style>
+  <script language="JavaScript" type="text/JavaScript">
+    
+//    var isDisplay=true;
+//    
+//    function excuteDisplay() {
+//    var divSearch=document.getElementById("aaa");
+//    
+//      if(isDisplay){
+//        divSearch.style.display='none';
+//      }else{
+//        divSearch.style.display='block';
+//      }
+//      isDisplay=!isDisplay;
+//    }
+    
+    function excuteByProperty() {
+    var divSearch=document.getElementById("aaa");
+    
+      if(divSearch.style.display=="block"){
+        divSearch.style.display='none';
+      }else{
+        divSearch.style.display='block';
+      }
+    }
+    
+    function checkAll() {
+        document.getElementById("ck1").checked=true;
+        document.getElementById("ck2").checked=true;
+        document.getElementById("ck3").checked=true;
+        document.getElementById("ck4").checked=true;
+        document.getElementById("ck5").checked=true;
+        document.getElementById("ck6").checked=true;
+    }
+    
+    function uncheckAll() {
+        document.getElementById("ck1").checked=false;
+        document.getElementById("ck2").checked=false;
+        document.getElementById("ck3").checked=false;
+        document.getElementById("ck4").checked=false;
+        document.getElementById("ck5").checked=false;
+        document.getElementById("ck6").checked=false;
+    }
+    
+    function checkORuncheck() {
+        if (!document.getElementById("ck0").checked){
+            uncheckAll();
+        }
+        else{
+            checkAll();
+        }
+    }
+    
+    
+  </script>
+</head>
+<body>
+    <input type="button" id="btn" value="表示/非表示" onclick="excuteByProperty()">
+    </button>
+    <div id="aaa" style="display:block;">１２３４５６７８９０</div>
+    <br/>
+
+
+    <div id="checkarea" style="border: 1px solid #999; width: 100%; padding: 15px; background: #eee; margin-top: 150px;">
+    <input type="button" id="btn1" value="全选" onclick="checkAll()">
+    <input type="button" id="btn2" value="取消全选" onclick="uncheckAll()">
+    <input type="checkbox" id="ck0" name="checkbox" onclick="checkORuncheck()" />
+    
+    <br />
+    <br />
+    <input type="checkbox" id="ck1" name="checkbox" value="checkbox1">
+    checkbox1
+    <input type="checkbox" id="ck2" name="checkbox" value="checkbox2">
+    checkbox2
+    <input type="checkbox" id="ck3" name="checkbox" value="checkbox3">
+    checkbox3
+    <input type="checkbox" id="ck4" name="checkbox" value="checkbox4">
+    checkbox4
+    <input type="checkbox" id="ck5" name="checkbox" value="checkbox5">
+    checkbox5
+    <input type="checkbox" id="ck6" name="checkbox" value="checkbox6">
+    checkbox6
+    </div>
+    
+</body>
+</html>
